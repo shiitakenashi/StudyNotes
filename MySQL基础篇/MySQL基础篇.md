@@ -433,8 +433,15 @@ ORDER BY hire_date;
 
 ### 2) 多列排序
 
+**复数的条件进行排序**
 * 可以使用不在SELECT列表中的列排序。 
 * 在对多列进行排序的时候，首先排序的第一列必须有相同的列值，才会对第二列进行排序。如果第 一列数据中所有值都是唯一的，将不再对第二列进行排序。
+
+```mysql
+SELECT last_name, job_id, department_id, hire_date
+FROM employees
+ORDER BY department_id ASC,hire_date DESC;
+```
 
 ## 2. 分页
 
