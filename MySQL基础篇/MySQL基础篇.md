@@ -492,6 +492,15 @@ SELECT CONCAT(worker.last_name , ' works for ', manager.last_name)
 FROM employees worker, employees manager
 WHERE worker.manager_id = manager.employee_id;
 ```
+#### CROSS JOIN （笛卡尔积的错误
+表里的每一项和另外的表一一对应，会发生笛卡尔积的错误。
+- 省略多个表的连接条件
+- 连接条件（或关联条件）无效
+- 所有表中的行互相连接
+
+#### 当查询语句中出现了多个表中都存在的字段，必须指明该字段所在的表
+
+**从sql优化的角度，多表查询时，每个字段前都指明其所在的表
 
 ### 2) 内连接与外连接
 
